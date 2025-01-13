@@ -2,7 +2,7 @@
 
 namespace Batsirai\CDD\Application\Console\Commands;
 
-use Batsirai\Domain\Services\EntityService;
+use Batsirai\CDD\Domain\Services\EntityService;
 use Illuminate\Console\Command;
 
 class GenerateEntityResources extends Command
