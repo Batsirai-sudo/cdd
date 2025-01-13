@@ -1,0 +1,14 @@
+<?php
+
+namespace {{NAMESPACE}}\Domain\Models;
+
+use App\Abstracts\Models\AbstractModel;
+
+/**
+ * Class {{MODEL}}
+ *
+ * @package {{NAMESPACE}}\Domain\Models
+ */
+class {{MODEL}} extends AbstractModel {
+    {{RELATIONSHIPS}}
+}

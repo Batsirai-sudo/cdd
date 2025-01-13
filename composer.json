@@ -1,0 +1,28 @@
+{
+    "name": "batsirai/cdd",
+    "description": "Configuration Driven Development using ynl files to generate model entities anthe functionality around the crud system",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Batsirai\\Cdd\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Batsirai Muchareva",
+            "email": "much.batsy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "config": {
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CDD\\Application\\Providers\\CDDServiceProvider"
+            ]
+        }
+    }
+}

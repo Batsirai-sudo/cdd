@@ -1,0 +1,26 @@
+<?php
+
+namespace {{NAMESPACE}}\Domain\Controllers;
+
+use App\Abstracts\Controllers\AbstractController;
+use Illuminate\Http\Response as LaravelResponse;
+use {{NAMESPACE}}\Domain\Models\{{MODEL}};
+use {{NAMESPACE}}\Domain\Services\{{MODEL}}Service;
+use {{NAMESPACE}}\Domain\Transformers\{{MODEL}}Transformer;
+
+
+class {{MODEL}}Controller extends AbstractController {
+    public function __construct(
+        {{MODEL}}Service $service,
+        {{MODEL}}Transformer $transformer
+    ) {
+        $this->service = $service;
+        $this->transformer = $transformer;
+
+        parent::__construct();
+    }
+
+    public function show( {{MODEL}} $model ): LaravelResponse {
+        return $this->response->item( $model, $this->transformer );
+    }
+}

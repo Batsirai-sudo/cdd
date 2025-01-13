@@ -1,0 +1,14 @@
+<?php
+
+namespace {{NAMESPACE}}\Domain\Transformers;
+
+use App\Abstracts\Transformer\AbstractTransformer;
+
+/**
+ * Class {{MODEL}}Transformer
+ *
+ * @package {{NAMESPACE}}\Domain\Transformers
+ */
+class {{MODEL}}Transformer extends AbstractTransformer {
+    protected array $fields = [ 'id', {{TRANSFORMER_FIELDS}} ];
+}
