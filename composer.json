@@ -11,7 +11,8 @@
     "authors": [
         {
             "name": "Batsirai Muchareva",
-            "email": "much.batsy@gmail.com"
+            "email": "much.batsy@gmail.com",
+            "role": "Software Developer"
         }
     ],
     "minimum-stability": "stable",
