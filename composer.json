@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Batsirai\\Cdd\\": "src/"
+            "Batsirai\\CDD\\": "src/"
         }
     },
     "authors": [
@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CDD\\Application\\Providers\\CDDServiceProvider"
+                "Batsirai\\CDD\\Application\\Providers\\CDDServiceProvider"
             ]
         }
     }

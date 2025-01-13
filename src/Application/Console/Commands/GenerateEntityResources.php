@@ -1,8 +1,8 @@
 <?php
 
-namespace CDD\Application\Console\Commands;
+namespace Batsirai\CDD\Application\Console\Commands;
 
-use CDD\Domain\Services\EntityService;
+use Batsirai\Domain\Services\EntityService;
 use Illuminate\Console\Command;
 
 class GenerateEntityResources extends Command

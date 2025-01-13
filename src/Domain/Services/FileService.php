@@ -1,9 +1,9 @@
 <?php
 
-namespace CDD\Domain\Services;
+namespace Batsirai\CDD\Domain\Services;
 
-use CDD\Domain\Traits\HasFiles;
-use CDD\Domain\Traits\HasMigrationTables;
+use Batsirai\CDD\Domain\Traits\HasFiles;
+use Batsirai\CDD\Domain\Traits\HasMigrationTables;
 use Exception;
 use Illuminate\Support\Facades\Artisan;
 

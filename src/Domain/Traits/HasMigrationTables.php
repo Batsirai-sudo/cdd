@@ -1,6 +1,6 @@
 <?php
 
-namespace CDD\Domain\Traits;
+namespace Batsirai\CDD\Domain\Traits;
 
 use Illuminate\Support\Facades\Artisan;
 

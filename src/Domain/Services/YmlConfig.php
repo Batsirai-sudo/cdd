@@ -1,6 +1,6 @@
 <?php
 
-namespace CDD\Domain\Services;
+namespace Batsirai\CDD\Domain\Services;
 
 use Symfony\Component\Yaml\Yaml;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace CDD\Domain\Traits;
+namespace Batsirai\CDD\Domain\Traits;
 
 trait HasFiles {
     private function generateSingleFile( string $type, string $directory, callable $beforeFileCreation = null ): static
