@@ -2,6 +2,7 @@
     "name": "batsirai/cdd",
     "description": "Configuration Driven Development using ynl files to generate model entities anthe functionality around the crud system",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Batsirai\\Cdd\\": "src/"
