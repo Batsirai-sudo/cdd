@@ -14,7 +14,7 @@
             "email": "much.batsy@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {},
     "config": {
         "optimize-autoloader": true
