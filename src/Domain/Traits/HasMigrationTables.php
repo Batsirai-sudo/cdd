@@ -56,7 +56,7 @@ trait HasMigrationTables
         $columnsString = implode("\n            ", array_merge($columns, $relationshipColumns));
 
         // Prepare the complete Schema::create block with $table->uuid('id')->primary() and columns
-        $schemaBlock = "Schema::create('definitions', function (Blueprint \$table) {\n"
+        $schemaBlock = "Schema::create('" .$this->config->getTableName() ."', function (Blueprint \$table) {\n"
             . "            \$table->uuid('id')->primary();\n"
             . "            $columnsString\n"
             . "            \$table->timestamps();";
