@@ -1,6 +1,6 @@
 {
     "name": "batsirai/cdd",
-    "description": "Configuration Driven Development using ynl files to generate model entities anthe functionality around the crud system",
+    "description": " [1.0.5] Configuration Driven Development using ynl files to generate model entities anthe functionality around the crud system",
     "type": "library",
     "license": "MIT",
     "autoload": {

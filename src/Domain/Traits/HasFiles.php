@@ -26,7 +26,7 @@ trait HasFiles {
         $updatedType = $type !== 'Model' ? $type : '';
 
         $fileName = $this->config->getEntityName() . $updatedType . '.php';
-        $folderPath = '/src/Domain/' . $folder . '/' . $fileName;
+        $folderPath = 'src/Domain/' . $folder . '/' . $fileName;
 
         return $this->getBasePath(  $folderPath );
     }
@@ -37,6 +37,12 @@ trait HasFiles {
     }
 
     private function createFile( $content, $outputPath,  callable $beforeFileCreation = null ): void {
+        // Check if file already exists
+        if (file_exists($outputPath)) {
+            \Laravel\Prompts\info("File already exists at: $outputPath. Skipping creation.");
+            return;
+        }
+
         $directory = dirname( $outputPath );
 
         // Debug: Show output path
