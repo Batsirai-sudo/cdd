@@ -37,18 +37,34 @@ trait HasFiles {
     }
 
     private function createFile( $content, $outputPath,  callable $beforeFileCreation = null ): void {
-        if ( ! is_dir( dirname($outputPath) ) ) {
-            if ( ! mkdir( dirname($outputPath), 0777, true) && ! is_dir( dirname($outputPath) ) ){
-                throw new \RuntimeException("Failed to create directory: " . dirname($outputPath));
+        $directory = dirname( $outputPath );
+
+        // Debug: Show output path
+        \Laravel\Prompts\info("Attempting to create file at: $outputPath");
+
+        if ( ! is_dir( $directory ) ) {
+            if ( ! mkdir( $directory, 0777, true) && ! is_dir( $directory ) ){
+                throw new \RuntimeException("Failed to create directory: $directory" );
             }
         }
+
+        // Check if directory is writable
+        if (!is_writable($directory)) {
+            throw new \RuntimeException("Directory is not writable: $directory");
+        }
+
         $updatedContent = $content;
 
         if ( $beforeFileCreation !== null ) {
             $updatedContent = $beforeFileCreation( $content );
         }
 
-        file_put_contents( $outputPath, $updatedContent );
+        // Try writing the file
+        $bytesWritten = file_put_contents( $outputPath, $updatedContent );
+
+        if ($bytesWritten === false) {
+            throw new \RuntimeException("Failed to write file: $outputPath");
+        }
 
         $this->createdFiles[] = $outputPath; // Track the created file
 
